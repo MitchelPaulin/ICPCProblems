@@ -26,6 +26,5 @@ WINDOW_SIZE = 13
 prod = 1
 
 for i in range(len(number) - WINDOW_SIZE):
-    temp = reduce(lambda x,y: int(x)*int(y), list(number[i: i + WINDOW_SIZE]))
-    prod = max(temp, prod)
+    prod = max(reduce(lambda x,y: int(x)*int(y), list(number[i: i + WINDOW_SIZE])), prod)
 print(prod)
